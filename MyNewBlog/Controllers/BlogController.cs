@@ -1,3 +1,4 @@
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyNewBlog.Controllers;
@@ -7,6 +8,7 @@ namespace MyNewBlog.Controllers;
 public class BlogController : Controller
 {
     // GET
+    [HttpGet]
     public IActionResult Index()
     {
         return Ok("Hello World");

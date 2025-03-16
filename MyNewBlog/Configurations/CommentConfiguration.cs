@@ -19,7 +19,8 @@ public class CommentConfiguration:IEntityTypeConfiguration<Comment>
         builder.Property(tmp => tmp.BlogID)
             .IsRequired();
         builder.HasOne(tmp => tmp.User)
-            .WithMany(tmp => tmp.Comments);
-            
+            .WithMany(tmp => tmp.Comments)
+            .OnDelete(DeleteBehavior.Restrict);
+
     }
 }

@@ -18,6 +18,6 @@ public class LikeConfiguration:IEntityTypeConfiguration<Like>
         builder.HasOne(tmp => tmp.Blog)
             .WithMany(tmp => tmp.Likes)
             .HasForeignKey(tmp => tmp.BlogID)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

@@ -9,4 +9,6 @@ public class User
     public DateTime UpdatedAt { get; set; }
     public DateTime CreatedAt { get; set; }
     public virtual ICollection<Blog> Blogs { get; set; }
+    public virtual ICollection<Like> Likes { get; set; }
+    public virtual ICollection<Comment> Comments { get; set; }
 }

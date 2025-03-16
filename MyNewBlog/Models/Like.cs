@@ -4,7 +4,7 @@ namespace MyNewBlog.Models;
 public class Like
 {
     public Guid ID { get; set; }
-    public DateTime CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
     [ForeignKey(nameof(User))]
     public Guid UserID { get; set; }
     public virtual User User { get; set; }

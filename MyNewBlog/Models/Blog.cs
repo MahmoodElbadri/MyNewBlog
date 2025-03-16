@@ -12,4 +12,6 @@ public class Blog
     [ForeignKey(nameof(User))]
     public Guid UserID { get; set; }
     public virtual User User { get; set; }
+    public virtual ICollection<Comment> Comments { get; set; }
+    public virtual ICollection<Like> Likes { get; set; }
 }

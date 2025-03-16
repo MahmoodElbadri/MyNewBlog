@@ -6,7 +6,7 @@ public class Comment
 {
     public Guid ID { get; set; }
     public string? Content { get; set; }
-    public DateTime CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; }
     [ForeignKey(nameof(Blog))]
     public Guid BlogID { get; set; }

@@ -2,8 +2,14 @@ using Microsoft.EntityFrameworkCore;
 using MyNewBlog;
 using MyNewBlog.Data;
 using MyNewBlog.Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var logger = new LoggerConfiguration()
+    .WriteTo.File("logs/BlogLog.txt", rollingInterval: RollingInterval.Day)
+    .MinimumLevel.Warning()
+    .CreateLogger();
 
 // Add services to the container.
 builder.Services.AddControllers();

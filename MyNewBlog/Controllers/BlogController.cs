@@ -1,4 +1,5 @@
 
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyNewBlog.Controllers;
@@ -7,10 +8,7 @@ namespace MyNewBlog.Controllers;
 [ApiController]
 public class BlogController : Controller
 {
-    // GET
-    [HttpGet]
-    public IActionResult Index()
-    {
-        return Ok("Hello World");
-    }
+    private readonly IUnitOfWork _uow;
+    private readonly IMapper _mapper;
+    
 }

@@ -10,6 +10,6 @@ public class BlogResponse
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; }
     public Guid UserID { get; set; }
-    public virtual ICollection<Comment>? Comments { get; set; }
+    public virtual ICollection<CommentResponse>? Comments { get; set; }
     public virtual ICollection<Like>? Likes { get; set; }
 }

@@ -11,5 +11,4 @@ public class UserResponse
     public DateTime UpdatedAt { get; set; }
     public virtual ICollection<BlogResponse> Blogs { get; set; } = [];
     public virtual ICollection<CommentResponse> Comments { get; set; } = [];
-    public virtual ICollection<Like> Likes { get; set; } = [];
 }

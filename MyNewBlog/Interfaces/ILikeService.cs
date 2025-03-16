@@ -1,6 +1,8 @@
+using MyNewBlog.Models;
+
 namespace MyNewBlog;
 
-public interface ILikeService
+public interface ILikeService: IGeneralOperations<Like>
 {
     
 }

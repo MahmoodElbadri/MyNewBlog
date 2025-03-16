@@ -2,7 +2,7 @@ using MyNewBlog.Models;
 
 namespace MyNewBlog;
 
-public interface ICommentService:IGeneralOperations<Comment>
+public interface ICommentService:IRepository<Comment>
 {
     
 }

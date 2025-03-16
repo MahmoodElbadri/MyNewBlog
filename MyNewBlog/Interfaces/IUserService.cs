@@ -3,7 +3,7 @@ using MyNewBlog.Models;
 
 namespace MyNewBlog;
 
-public interface IUserService: IGeneralOperations<User>
+public interface IUserService: IRepository<User>
 {
     Task<User> GetUserByUsernameAsync(string username);
     Task<UserResponse> GetBlogsByUserId(Guid id);

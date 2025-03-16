@@ -18,7 +18,8 @@ public class UserConfiguration:IEntityTypeConfiguration<User>
             .HasMaxLength(255)
             .HasAnnotation("MinLength", 5);
         builder.Property(tmp => tmp.PasswordHash)
-            .IsRequired();
+            .IsRequired()
+            .HasMaxLength(255);
         builder.HasMany(tmp => tmp.Comments)
             .WithOne(tmp => tmp.User);
         builder.HasMany(tmp => tmp.Blogs)

@@ -1,4 +1,4 @@
-# MyNewBlog
+# MyNewBlog 
 
 MyNewBlog is a **.NET 9-powered blogging platform** that allows users to create, edit, and interact with blogs. It features **user authentication, blog creation, comments, likes, and JWT-based authentication**.
 
